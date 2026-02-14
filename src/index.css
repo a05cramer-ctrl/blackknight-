@@ -1,0 +1,76 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --black: #0a0a0c;
+  --black-soft: #120e0f;
+  --black-card: #1a1415;
+  --charcoal: #221a1b;
+  --red: #e63946;
+  --red-dark: #c1121f;
+  --red-bright: #ff4757;
+  --red-glow: rgba(230, 57, 70, 0.5);
+  --red-subtle: rgba(230, 57, 70, 0.2);
+  --red-soft: rgba(230, 57, 70, 0.1);
+  --orange: #f4a261;
+  --gold: #e9c46a;
+  --ash: #2a2223;
+  --text: #fafafa;
+  --text-muted: #a8a0a1;
+  --font-display: 'Bebas Neue', sans-serif;
+  --font-tech: 'Orbitron', sans-serif;
+  --font-body: 'Rajdhani', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+::selection {
+  background: var(--red-subtle);
+  color: var(--text);
+}
+
+body {
+  font-family: var(--font-body);
+  font-weight: 500;
+  background: var(--black);
+  color: var(--text);
+  min-height: 100vh;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+/* Red-themed background with animated gradients */
+.fortnite-bg {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background: 
+    radial-gradient(ellipse 120% 80% at 50% -20%, var(--red-soft) 0%, transparent 50%),
+    radial-gradient(ellipse 80% 60% at 80% 30%, rgba(244, 162, 97, 0.15) 0%, transparent 40%),
+    radial-gradient(ellipse 60% 80% at 20% 80%, var(--red-soft) 0%, transparent 40%),
+    linear-gradient(180deg, var(--black) 0%, var(--black-soft) 100%);
+}
+
+/* Glow effects */
+@keyframes glow-pulse {
+  0%, 100% { box-shadow: 0 0 25px var(--red-glow); }
+  50% { box-shadow: 0 0 40px var(--red-glow), 0 0 60px var(--red-subtle); }
+}
+
+@keyframes text-glow {
+  0%, 100% { text-shadow: 0 0 20px var(--red-subtle); }
+  50% { text-shadow: 0 0 35px var(--red-glow); }
+}

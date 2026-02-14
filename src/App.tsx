@@ -58,7 +58,7 @@ function App() {
           <h1 className="hero-headline">BLACK KNIGHT</h1>
           <p className="hero-tagline">The last guardian of the arena. Victory or oblivion.</p>
           <div className="hero-actions">
-            <a href="#" className="quicklink quicklink-chart">
+            <a href="https://dexscreener.com/solana/DEbGRMk6twjNonNyeQv1bXBQgCPERD5jTXmjsgVkpump" target="_blank" rel="noopener noreferrer" className="quicklink quicklink-chart">
             <span className="ql-icon" aria-hidden>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                 <polyline points="23 6 13.5 15.5 8.5 10.5 1 18" />
@@ -146,6 +146,11 @@ function App() {
           <div className="stat-card"><span className="stat-value">1B</span><span className="stat-label">SUPPLY</span></div>
           <div className="stat-card"><span className="stat-value">0%</span><span className="stat-label">TAX</span></div>
           <div className="stat-card"><span className="stat-value">LP</span><span className="stat-label">BURNED</span></div>
+        </div>
+        <div className="stat-ca">
+          <span className="stat-ca-label">CA</span>
+          <code className="stat-ca-value">DEbGRMk6twjNonNyeQv1bXBQgCPERD5jTXmjsgVkpump</code>
+          <button type="button" className="stat-ca-copy" onClick={(e) => { navigator.clipboard.writeText('DEbGRMk6twjNonNyeQv1bXBQgCPERD5jTXmjsgVkpump'); (e.target as HTMLButtonElement).textContent = 'Copied!'; setTimeout(() => { (e.target as HTMLButtonElement).textContent = 'Copy'; }, 1500); }}>Copy</button>
         </div>
       </section>
 
